@@ -1,0 +1,306 @@
+.result {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+  
+.cover-r {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vmin;
+  padding-left: 2vmin;
+  padding-top: 2vmin;
+  color: black;
+}
+
+.logo-r {
+  height: 12vmin;
+  padding-right: 1vmin;
+}
+
+.totalinput-r {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.input-r {
+  width: 75vmin;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 5px 5px; 
+  background-image: url('../search.svg');
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 50px;
+  animation: input-trans 0.5s ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.ul-r {
+  box-shadow: 2px 2px 2px grey;
+  z-index: 1;
+  position: absolute;
+  top: 3vmin+40px;
+  list-style-type: none;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  width: 75vmin;
+  background-color: white;
+}
+
+.show-r {
+  display: block;
+  border-radius: 2px;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  animation: list-show 0.5s ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.notShow-r {
+  visibility: hidden;
+  display: block;
+  border-radius: 2px;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  animation: list-notShow 0.5s ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.show-r:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+.show-r:active {
+  background-color: #ddd;
+  color: black;
+}
+
+.advance-r {
+  margin: 1vmin;
+  width: 450px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 16px;
+}
+
+.tooltip {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: white;
+  border: 1px solid lightgray;
+  color: gray;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent lightgray transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.check-r {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.check-r input::after, .check-r input::before {
+  position: absolute;
+  visibility: visible;
+  content: "";
+}
+.check-r input::after {
+  width: 16px;
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+.check-r input::before {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: lightgray;
+  transition: all 0.2s;
+}
+.check-r input:checked::after {
+  transform: translateX(20px);
+}
+.check-r input:checked::before {
+  background-color: lightblue;
+}
+
+.hr-r {
+  margin-top: 2vmin;
+  border:1px solid #ccc;
+  width: 95vw;
+  animation: hr-trans 0.5s ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.vr-r {
+  color: #ccc;
+}
+
+.imgs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.img-link {
+  padding: 1vmin;
+  margin-top: 1vmin;
+}
+
+.img {
+  height: 20vmin;
+  transition: opacity 0.2s;
+  transition: box-shadow 0.2s;
+}
+
+.img:hover {
+  opacity: 0.9;
+  box-shadow: 3px 3px 3px #888888;
+}
+
+.loading {
+  text-align: center;
+  font-size: 16px;
+}
+
+.loading-ring {
+  margin-top: 20vmin;
+  border:16px solid #f3f3f3;
+  border-radius:50%;
+  border-top:16px solid #2842d8;
+  width:50px;
+  height:50px;
+  animation:rotate 2s linear infinite;
+}
+
+.end-text {
+  position: relative;
+  top: 16px;
+  background: white;
+  text-align: center;
+  font-size: 8px;
+}
+
+.end-line {
+  border-top: 2px solid #ccc;
+  width: 70vw;
+  margin: 5vw 15vw 0 15vw;
+  text-align: center;
+  font-size: 8px;
+}
+
+.end-line span {
+  display: inline-block;
+  padding: 0 10px 0 10px;
+  position: relative;
+  top: -16px;
+  background-color: white;
+}
+
+@keyframes rotate{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform:rotate(360deg);
+  }
+}
+
+@keyframes input-trans {
+  from {
+    width: 0vmin;
+  }
+  to {
+    whdth: 75vmin;
+  }
+}
+
+@keyframes list-show {
+  from {
+    height: 0;
+  }
+  to {
+    height: 24px;
+  }
+}
+
+@keyframes list-notShow {
+  from {
+    height: 24px;
+    padding: 8px 16px;
+  }
+  to {
+    height: 0;
+    padding: 0 16px;
+  }
+}
+
+@keyframes hr-trans {
+  from {
+    width: 0;
+  }
+  to {
+    whdth: 95vw;
+  }
+}

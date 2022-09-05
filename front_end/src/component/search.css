@@ -1,0 +1,145 @@
+.search {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbox-s {
+  margin-bottom: 20vmin;
+}
+
+.cover-s {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vmin;
+    padding-right: 3vmin;
+    padding-bottom: 3vmin;
+    color: balck;
+    animation: cover-trans 0.8s ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.logo-s {
+  height: 40vmin;
+  animation: logo-trans 0.5s ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.input-s {
+  width: 75vmin;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 5px 5px; 
+  background-image: url('../search.svg');
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 50px;
+  animation: input-expand 0.5s ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.ul-s {
+  list-style-type: none;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  width: 75vmin;
+  background-color: white;
+}
+
+.show-s {
+  display: block;
+  border-radius: 2px;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  animation: list-show 0.5s ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.notShow-s {
+  visibility: hidden;
+  display: block;
+  border-radius: 2px;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  animation: list-hide 0.5s ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.show-s:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+.show-s:active {
+  background-color: #ddd;
+  color: black;
+}
+
+
+@keyframes cover-trans {
+  from {
+    flex-direction: column;
+    font-size: 6vmin;
+  }
+  to {
+    flex-direction: row;
+    font-size: 4vmin;
+  }
+}
+
+@keyframes logo-trans {
+  from {
+    transform: rotate(30deg);
+    height: 40vmin;
+  }
+  to {
+    transform: rotate(90deg);
+    height: 12vmin;
+  }
+}
+
+@keyframes input-expand {
+  from {
+    width: 0vmin;
+  }
+  to {
+    whdth: 75vmin;
+  }
+}
+
+@keyframes list-show {
+  from {
+    height: 0;
+  }
+  to {
+    height: 24px;
+  }
+}
+
+@keyframes list-hide {
+  from {
+    height: 24px;
+    padding: 8px 16px;
+  }
+  to {
+    height: 0;
+    padding: 0 16px;
+  }
+}

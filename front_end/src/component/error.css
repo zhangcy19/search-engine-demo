@@ -1,0 +1,19 @@
+.error {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.button-e {
+    background-color: white;
+    border: none;
+    font-size: 4vmin;
+    color: black;
+    margin-bottom: 10vmin;
+}
+
+.logo-e {
+    height: 30vmin;
+}
